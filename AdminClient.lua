@@ -5,7 +5,6 @@ local player = Players.LocalPlayer
 local remote = ReplicatedStorage:WaitForChild("AdminRemote")
 
 player.Chatted:Connect(function(msg)
-	-- send all chat messages to server
-	-- server will decide if it's valid admin
+	-- Sends messages to server and decides if it is an admin
 	remote:FireServer(msg)
 end)
